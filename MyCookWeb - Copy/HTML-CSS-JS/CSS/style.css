@@ -1,0 +1,1072 @@
+body {
+    display: flex;
+    /*align-items: center;
+    justify-content: center;*/ 
+    background-color: #212121;
+    margin: 0;
+    line-height: 1.5; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.section{
+  background-color: #bbb;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  width: 80%;
+  margin: 10rem auto 0 auto;
+}
+
+.section img{
+  height: 250px;
+
+}
+
+.section p{
+  color: #ccc;
+  margin-right:  15px;
+  justify-content: center;
+}
+
+/*Utilities*/
+h1,h2,h3,h4 {
+    margin: 0;
+}
+
+/*Start-For Black Button*/
+.btn__dark{
+    display: inline-block;
+    background-color: #212121;
+    color:#fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 100px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transition: all 0.4s;
+}
+
+.btn__dark:hover{
+    background-color: black;
+    color:#d37ebfef;
+}
+
+.margin__top{
+    margin-top: 15px;
+}
+/*End-For Black Button*/
+/*Start-Navbar*/
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0 ;
+    list-style-type: none;
+    background-color: #212121;
+}
+
+.navbar ul li {
+    display: inline-block;
+}
+
+.navbar li a  {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding : 25px 10px;
+    font-size: 13px;
+    color: #d37ebfef;
+    letter-spacing: 2px;
+}
+
+.logo li a{
+  color: #f8f8f8ef;
+  padding : 25px 10px;
+  letter-spacing: 2px;
+}
+/*End-Navbae*/
+/*Start-Hero Section*/
+.hero__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100% ;
+    height: 85vh;
+    background-image: linear-gradient(#d37ebfef,#fff),url("../Images/Breakfast/OmletteToast.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.hero__text{
+    color:#fff;
+    text-align: center; 
+}
+
+.hero__text h1{
+    font-size: 80px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.hero__text p{
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+/*End-Hero Section*/
+/*StartRecipe Section*/
+.recipe__section{
+    padding:70px 0;
+    display: flex;
+}
+
+.image__wrapper {
+    position: relative;
+    background-color: #212121;
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+}
+
+.col-md-4{
+    float:right;
+    width: auto;
+    height: 400px;
+    text-align: center;
+    justify-content:center;
+}
+
+.image__wrapper img {
+    width: 350px;
+    height: 350px;
+    transition: all 0.5s;
+}
+
+.image__wrapper:hover img {
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+}
+
+.image__wrapper-text {
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    background-color:rgba(0, 0, 0, 0.7) ;
+    width: 400px;
+    height: 100px;
+    color:#fff;
+    letter-spacing: 3px; 
+}
+
+.image__wrapper-text h2 {
+    color:#d37ebfef;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    text-transform:uppercase;
+    padding-top: 10px;
+}
+
+.image__wrapper-text p{
+    line-height: 30px;
+    text-align: center;
+    font-size: 10px;
+    padding : 10px;
+    color: #bbb;
+}
+/*End-Recipe Section*/
+/*Start-About Section*/
+.about__section {
+    background-color: #d37ebfef;
+    padding: 70px 70px 70px 70px;
+    color: #fff;
+    height: 350px;
+    width: auto;
+}
+
+.about__section h3 {
+    font-size: 28px;
+    font-weight: 700 ;
+    text-align: left;
+    padding: 20px 20px;
+    margin: 0 0 1px;
+    padding:10px;
+}
+
+.about__section p{
+    line-height: 15px;
+    text-align: left;
+    color: #000;
+    margin: 0 0 1px;
+    padding: 10px;
+}
+
+.image__background {
+    position: relative;
+    z-index: 1;
+}
+
+.image__background::before {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #000;
+}
+
+.image__background img{
+    box-shadow: 0px 0px 10px 1px rgb(0, 0, 0, 0.5);
+    width: 50;
+    height: 100;
+    top: -30px;
+    left: -20px;
+    z-index: -1;
+}  
+
+.col-md-3{
+    float:right;
+    width: 50px;
+    height: 300px;
+    padding: -10px -10px;
+}
+/*End-About Section*/
+/*Start-Facts*/
+.flip-card {
+    padding: auto;
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #000;
+    justify-content: center;
+    perspective: 1000px; 
+    margin: 10px auto;
+    border-radius: 1;
+}
+  
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+  
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+  
+.flip-card-back {
+    background-color: #d37ebfef;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back p {
+    color:#f2f2f2;
+}
+
+/*table section*/
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Accordion Section*/
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+  
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+  
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion:after {
+    content: '\02795'; 
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+  
+.active:after {
+    content: "\2796"; 
+}
+/*End-Facts*/
+/*Start- dropdown container*/
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdown .dropbtn {
+    display: block;
+    color: #d37ebfef;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 27px 10px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-family: inherit; 
+    margin: 0; 
+  }
+  
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #fff;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  /*End- dropdown container*/
+  /*Start-Headlines*/
+  .headline__pageBr { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100% ;
+    height: 35vh;
+    background-image: url("Images/Breakfast/OmletteToast.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+  }
+
+  .headline__pageCM {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100% ;
+    height: 5vh;
+    background-size: cover;
+    background-blend-mode: multiply;
+    margin-bottom: 50px;
+  }
+
+  .headline__pageFc { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100% ;
+    height: 35vh;
+    background-image: url("../Images/ForFacts/Background2.png");
+    background-size: cover;
+    background-blend-mode: multiply;
+  }
+
+  .headline__pageSk {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100% ;
+    height: 50vh;
+    background-image: url("../Images/Snacks/Bourekas.JPG");
+    background-size: cover;
+    background-blend-mode: multiply;
+  }
+
+  .headline__pageAM , .headline__pageCo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100% ;
+    height: 40vh;
+    background-image: url("../Images/Untitled\ design\ \(1\).png");
+    background-size: cover;
+    background-blend-mode: multiply;
+  }
+
+  .headline__pageLn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100% ;
+    height: 50vh;
+    background-image: url("../Images/Lunch/Levivot.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+  }
+  
+
+  .headline__pageBr h1, .headline__pageLn h1,  .headline__pageSn h1 , .headline__pageFc h1 , .headline__pageSk h1 {
+    position: center;
+    color: rgba(255, 255, 255, 0.533);
+    text-transform: uppercase;
+    padding: 25px 20px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+  
+  .headline__pageCM h1{
+    position: center;
+    color: #d37ebfef;
+    text-transform: uppercase;
+    padding: 25px 20px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+
+  .headline__pageAM h1,.headline__pageCo h1{
+    position: center;
+    color: rgb(0, 67, 250);
+    text-transform: uppercase;
+    padding: 25px 20px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 1000;
+  }
+
+  .headline__pageBr h4{
+    font-size: 14px;
+    position: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.533);
+    padding: 45px 40px;
+    align-items: center;
+  }
+/*End-Headlines*/
+/*Start-Table*/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 10%;
+    border: 1px solid #000;
+    margin-left:auto; 
+    margin-right:auto;
+    float: left;
+  }
+  
+  th, td {
+    text-align: center;
+    padding: 5px;
+    position: center;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f266;
+  }
+/*End-Table*/
+/*Start-headline_recipes*/
+
+  .headline__recipes h1 {
+    text-transform: uppercase;
+    padding : 25px 20px;
+    font-size: 16px;
+    color: #d37ebfef;
+    letter-spacing: 2px;
+  }
+/*End-headline_recipes*/
+/*Start-Acoordion*/
+  .AccordionTest {
+    width:90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+  }
+
+  .Accordion-item {
+    background-color: rgb(239, 239, 239);
+    color: #111;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px 0 rgb(0, 0, 0,);
+  }
+
+  .Accordion-item-header{
+    padding: 0.5rem 3rem 0.5rem 0.5rem;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: 13px;
+    color:#000; 
+    text-transform: uppercase;
+  }
+
+  .Accordion-item-header::after { 
+    content: '\02795';
+    font-size: 0.9rem;
+    position: absolute;
+    right: 1rem;
+    transition: transform 0.2 ease-out;
+  }
+
+  .Accordion-item-header.active::after{
+    transform: rotate(45deg);
+  }
+
+  .Accordion-item-body {
+    max-height:0;
+    overflow: hidden;
+    transition: max-height 0.2 ease-out;
+  }
+
+  .Accordion-item-body-content {
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 1px solid;
+    border-image: liner-gradient(to right,transparent);
+  }
+/*End-Acoordion*/
+  
+  img{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  p{
+    margin-right: 3px;
+    padding : 25px 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #000
+  }
+
+  .copyright p{
+    font-size: 15px;
+    color: #ccc;
+  }
+
+
+.table__food th,td{
+    font-size: 8px;
+    border: 1px solid #111;
+    text-align: center;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+/*For responsive photo*/
+  .responsive {
+    width: 100%;
+    height: auto;
+  }
+
+  /**/
+
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+    padding: 40px 40px 40px 40px;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 10px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 1px 1px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 70px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #d37ebfef ;
+    padding: 2px 2px 0 0; 
+    color: white;
+    
+  }
+  
+  .row1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column1 {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+#wholepage{
+    min-width: 100%;
+    min-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#pagewrapper{
+    border: 1px black solid;
+    min-height: auto;
+}
+
+.about-section {
+    background: url(Images/student.jpg) no-repeat left;
+    background-size: 55%;
+    background-color: #eee;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.inner-container {
+    width: 55%;
+    float: right;
+    background-color: #fdfdfd;
+    padding: 150px;
+}
+
+.aboutMe__section p,.facts__desc p,.short__line p{
+  color:#d4d1d3ef;
+}
+
+p{
+  color: #000;
+}
+
+.footer-container{
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul{
+  list-style: none;
+
+}
+.footer{
+  background-color: #212121;
+  padding-bottom: 4rem;
+  margin-top: 50px;
+  justify-content: center;
+ 
+}
+
+.footer-col{
+  display: flex;
+  flex-direction: column;
+  margin-right: 4rem;
+}
+
+.footer-col h4,.footer-col h2,.footer-col h3{
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  position: relative;
+  
+}
+
+.footer-col h4::before,.footer-col h2::before,.footer-col h3::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #d37ebfef;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+  
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+ }
+
+ .footer-col ul li a {
+  font-size: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbb;
+  display: block;
+  transition: all 0.3s ease;
+ }
+
+ .footer-col ul li a:hover{
+    color:#fff;
+    padding-left: 8px;
+    
+ }
+
+.contant-info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  flex: 1;
+  max-width: 200px;
+  height: 50px;
+  background-color: #444;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px auto;
+}
+
+.icon {
+  font-size: 20px;
+  color: #d37ebfef;
+  transition: 0.3s linear ;
+}
+
+.card:hover .icon{
+  transform: scale(4);
+  opacity: 0;
+}
+
+.card-content h4 ,
+.card-content span {
+  position:absolute;
+  opacity: 0;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 10px;
+}
+
+.card-content h3{
+  top: 25px;
+  text-transform: uppercase;
+  color: #d37ebfef;
+}
+
+.card-content span{
+  bottom: 15px;
+  color:#d37ebfef;
+  font-weight: 500;
+}
+
+.card:hover h3{
+  opacity: 1;
+  top: 5px;
+  transition: 0.3s liner;
+}
+
+.card:hover span{
+  opacity: 1;
+  bottom: 15px;
+  transition: 0.3s liner;
+}
+
+
+@media(max-width:767px) {
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  .card {
+    flex: 100%;
+    max-width: 500px;
+  }
+ }
+
+ /*Start-Image Gallery on AM page*/
+ .img-gallery{
+  width: 80%;
+  margin: 25px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+ }
+
+ .img-gallery img{
+  width: 100%;
+  cursor: pointer;
+ }
+
+ .img-gallery img:hover{
+  transform: scale(0.8) ;
+  border-radius: 20px;
+  box-shadow: 0 32px 75px rgba(68,77,136,0.2);
+ }
+/*End-Image Gallery on AM page*/
+
+ .expl p{
+  font-size: 16px;
+  color: #d37ebfef;
+ }
+
+ /*Start-For contact*/
+.wrapper {
+  width: 700px;
+  margin:5% auto;
+  margin-top: 10px;
+  
+}
+
+.form-area {
+  display: flex;
+  background: #030303ef;
+  
+
+  border-radius: 25px;
+  padding:1.9em;
+}
+
+.msg-area {
+  display: flex;
+  flex-direction: column;
+  order: 2;
+}
+
+.msg-area > textarea {
+  flex: 1;
+  min-width: 18em;
+  background: transparent;
+  color:#000;
+}
+
+.details-area {
+  flex: 1;
+  order: 1;
+  margin-right: 2em;
+}
+
+.details-area input{
+  width: 100%;
+  background: transparent;
+  color: rgb(253, 253, 253);
+  border-radius: 40px;
+}
+
+.details-area input,
+.details-area button {
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.details-area button{
+  background: #d37ebfef;
+  color: #000;
+  border: 0;
+  padding: 15px 50px;
+  border-radius: 40px;
+  font-size: 10px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.details-area button:hover{
+  background-color: black;
+  color:#d37ebfef;
+}
+
+label{
+  color:rgb(255, 255, 255);
+  text-transform: uppercase ;
+  line-height: 40px;
+}
+/*End-For contact*/
+
+
+.Survey form{
+  margin-top: 20px;
+  color:#d37ebfef;
+  margin-left: 40px;
+}
+
+.Survey form:checked~label{
+  border-color: #c3bfe5;
+}
+
+.Survey form:checked~label::before{
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.line p{
+  margin-top: 25px;
+  background-color: #d37ebfef;
+  text-align: left
+}
+
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-container img {
+  width: 200px;
+  height: 200px;
+}
+
+.flex-container p {
+  margin-left: 20px;
+  font-size: 14px;
+  color: #000;
+  text-align: center;
+}
+
+.Accordion-item-body-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.content-left {
+  flex: 1;
+  padding-right: 20px; /* Adjust as needed */
+}
+
+.content-right {
+  flex: 1;
+}
+
+.content-right img {
+  width: 100%; /* Ensure the image takes full width of its container */
+}
+
+/* Ensure the paragraph text wraps correctly */
+.content-left p {
+  white-space: pre-line;
+  /* Add any other styles as needed */
+}
